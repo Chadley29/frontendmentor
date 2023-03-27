@@ -13,7 +13,6 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -25,8 +24,8 @@ This is my first Frontend Mentor challenge where I had to code a QR code compone
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Chadley29/frontendmentor/tree/main/qr-code-component-main)
+- Live Site URL: [Add live site URL here](https://qr-code-component-main-chadley29.netlify.app)
 
 ## My process
 
