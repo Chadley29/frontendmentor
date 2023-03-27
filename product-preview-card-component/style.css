@@ -1,27 +1,42 @@
 /* --------- */
 
 :root {
-  --clr-white: hsl(0, 0%, 100%);
-  --clr-light-gray: hsl(212, 45%, 89%);
-  --clr-grayish-blue: hsl(220, 15%, 55%);
-  --clr-dark-blue: hsl(218, 44%, 22%);
+  /* primary */
+  --clr-primary-dark-cyan: hsl(158, 36%, 37%);
+  --clr-primary-cream: hsl(30, 38%, 92%);
 
-  --font-family-default: "Outfit";
-  --fw-regular: 400;
+  /* neutral */
+  --clr-neutral-dark-blue: hsl(212, 21%, 14%);
+  --clr-neutral-dark-gray-blue: hsl(228, 12%, 48%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+
+  --font-family-default: "Montserrat";
+  --font-family-alt: "Fraunces";
+  --fw-regular: 500;
   --fw-bold: 700;
-  --fs-400: 15px;
+  --fs-400: 14px;
+
+  --font-opacity-light: 0.6;
 
   --width__mobile: 375px;
   --width__desktop: 1440px;
 
-  --border-radius-default: 1.125rem;
+  --border-radius-default: 1rem;
 }
 
 @font-face {
-  font-family: "Outfit";
+  font-family: "Montserrat";
   font-display: swap;
-  font-weight: 400 700;
-  src: url(./assets/Outfit-VariableFont_wght.ttf) format("truetype");
+  font-weight: 500 700;
+  src: url(./assets/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Fraunces";
+  font-display: swap;
+  font-weight: 700;
+  src: url(./assets/Fraunces-VariableFont_SOFT\WONK\opsz\wght.ttf)
+    format("truetype");
 }
 
 /* --------- */
@@ -107,12 +122,106 @@ body {
   place-items: center;
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: var(--clr-light-gray);
+  background-color: var(--clr-primary-cream);
   font-family: var(--font-family-default);
-  font-size: var(--fs-400);
-  color: var(--clr-dark-blue);
+  font-size: var(--fs-500);
+  color: var(--clr-neutral-dark-blue);
 
   position: relative;
+}
+
+.product__container {
+  display: grid;
+  grid-auto-rows: auto;
+  width: 90%;
+  margin-inline: auto;
+  background-color: var(--clr-neutral-white);
+  border-radius: var(--border-radius-default);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .product__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50rem;
+  }
+}
+
+.product__img-container {
+  height: 18rem;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product__details {
+  padding: 2rem;
+}
+
+.product__category {
+  font-size: clamp(0.5rem, 5vw, 1rem);
+  text-transform: uppercase;
+  color: var(--clr-neutral-dark-gray-blue);
+  letter-spacing: 0.25rem;
+}
+
+.product__title {
+  font-weight: var(--fw-bold);
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  margin-block: 1rem;
+}
+
+.product__description {
+  font-size: clamp(1rem, 5vw, 1.125rem);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: var(--clr-neutral-dark-gray-blue);
+}
+
+.product__price {
+  display: flex;
+  gap: 1rem;
+  justify-items: flex-start;
+}
+
+.product__sale-price {
+  color: var(--clr-primary-dark-cyan);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-family: var(--font-family-alt);
+  font-weight: var(--fw-bold);
+}
+
+.product__original-price {
+  display: flex;
+  align-items: center;
+  font-size: clamp(0.75rem, 5vw, 1rem);
+  color: var(--clr-neutral-dark-gray-blue);
+}
+
+.cta-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-block: 1rem;
+  margin-inline: auto;
+  background-color: var(--clr-primary-dark-cyan);
+  border-radius: var(--border-radius-default);
+  padding: 1rem;
+}
+
+.cta-container svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.cta-button {
+  color: var(--clr-neutral-white);
+  width: 100%;
 }
 
 .attribution {
