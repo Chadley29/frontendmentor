@@ -24,8 +24,8 @@ This is my first Frontend Mentor challenge where I had to code a QR code compone
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Chadley29/frontendmentor/tree/main/qr-code-component-main)
-- Live Site URL: [Add live site URL here](https://qr-code-component-main-chadley29.netlify.app)
+- Solution URL: [https://github.com/Chadley29/frontendmentor/tree/main/qr-code-component-main]
+- Live Site URL: [https://qr-code-component-main-chadley29.netlify.app]
 
 ## My process
 
