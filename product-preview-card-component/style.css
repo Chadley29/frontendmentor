@@ -21,7 +21,7 @@
   --width__mobile: 375px;
   --width__desktop: 1440px;
 
-  --border-radius-default: 1rem;
+  --border-radius-default: 0.5rem;
 }
 
 @font-face {
@@ -124,7 +124,7 @@ body {
   min-height: 100dvh;
   background-color: var(--clr-primary-cream);
   font-family: var(--font-family-default);
-  font-size: var(--fs-500);
+  font-size: var(--fs-400);
   color: var(--clr-neutral-dark-blue);
 
   position: relative;
@@ -140,16 +140,22 @@ body {
   overflow: hidden;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 540px) {
   .product__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 50rem;
+    width: 47rem;
   }
 }
 
 .product__img-container {
   height: 18rem;
+}
+
+@media (min-width: 540px) {
+  .product__img-container {
+    height: 100%;
+  }
 }
 
 .product-img {
@@ -169,11 +175,26 @@ body {
   letter-spacing: 0.25rem;
 }
 
+@media (min-width: 540px) {
+  .product__category {
+    font-size: clamp(0.75rem, 5vw, 1.25rem);
+  }
+}
+
 .product__title {
   font-weight: var(--fw-bold);
+  font-family: var(--font-family-alt);
+
   font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1;
   margin-block: 1rem;
+}
+
+@media (min-width: 540px) {
+  .product__title {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin-block: 2rem;
+  }
 }
 
 .product__description {
@@ -200,12 +221,22 @@ body {
   display: flex;
   align-items: center;
   font-size: clamp(0.75rem, 5vw, 1rem);
+  font-family: var(--font-family-alt);
   color: var(--clr-neutral-dark-gray-blue);
+}
+
+@media (min-width: 540px) {
+  .product__sale-price {
+    font-size: clamp(2.25rem, 5vw, 3rem);
+  }
+
+  .product__original-price {
+    font-size: clamp(0.75rem, 5vw, 1rem);
+  }
 }
 
 .cta-container {
   display: flex;
-  gap: 1rem;
   align-items: center;
   margin-block: 1rem;
   margin-inline: auto;
@@ -214,7 +245,14 @@ body {
   padding: 1rem;
 }
 
-.cta-container svg {
+.cta-contents {
+  display: flex;
+  justify-items: center;
+  gap: 1rem;
+  margin-inline: auto;
+}
+
+.cta-container img {
   width: 1rem;
   height: 1rem;
 }
